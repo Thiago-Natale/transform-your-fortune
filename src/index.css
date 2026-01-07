@@ -2,95 +2,96 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+@import '@fontsource/montserrat/400.css';
+@import '@fontsource/montserrat/600.css';
+@import '@fontsource/montserrat/700.css';
+@import '@fontsource/montserrat/800.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core Colors - HSL format */
+    --background: 216 33% 97%;
+    --foreground: 215 28% 23%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 215 28% 23%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 215 28% 23%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Trust Blue #0A2463 */
+    --primary: 222 81% 21%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Lighter blue variant */
+    --secondary: 222 60% 30%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Action - Orange #FF6B35 */
+    --action: 17 100% 60%;
+    --action-foreground: 0 0% 100%;
+    --action-hover: 17 100% 52%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Success/Progress - Green #00C896 */
+    --success: 162 100% 39%;
+    --success-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Muted */
+    --muted: 210 20% 94%;
+    --muted-foreground: 215 16% 47%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Accent */
+    --accent: 222 81% 21%;
+    --accent-foreground: 0 0% 100%;
 
-    --radius: 0.5rem;
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 222 81% 21%;
+
+    --radius: 0.75rem;
+
+    /* Custom shadows */
+    --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-button: 0 4px 14px rgba(255, 107, 53, 0.4);
+    --shadow-button-hover: 0 6px 20px rgba(255, 107, 53, 0.5);
+
+    /* Sidebar - keeping defaults */
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 222 47% 8%;
     --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
+    --card: 222 47% 11%;
     --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
+    --popover: 222 47% 11%;
     --popover-foreground: 210 40% 98%;
-
     --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 217 33% 17%;
     --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 217 33% 17%;
     --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 213 27% 84%;
   }
 }
 
@@ -99,7 +100,248 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
-  body {
-    @apply bg-background text-foreground;
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+}
+
+@layer components {
+  /* Typography Classes */
+  .font-display {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Heading Styles */
+  .heading-hero {
+    @apply font-display font-bold text-[28px] md:text-[40px] lg:text-[52px] leading-tight tracking-tight;
+  }
+
+  .heading-section {
+    @apply font-display font-semibold text-[24px] md:text-[32px] lg:text-[40px] leading-tight;
+  }
+
+  .heading-subsection {
+    @apply font-display font-semibold text-[20px] md:text-[24px] lg:text-[28px] leading-snug;
+  }
+
+  .text-body {
+    @apply font-body text-base md:text-lg leading-relaxed;
+  }
+
+  .text-emphasis {
+    @apply font-display font-extrabold;
+  }
+
+  /* Button Variants */
+  .btn-action {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-4 md:px-8 md:py-5
+           bg-action text-action-foreground font-display font-bold text-lg md:text-xl
+           rounded-xl transition-all duration-300 ease-out
+           hover:bg-action-hover hover:scale-105 hover:shadow-button-hover
+           active:scale-100
+           shadow-button;
+  }
+
+  .btn-action-pulse {
+    @apply btn-action animate-pulse-slow;
+  }
+
+  /* Card Styles */
+  .card-elevated {
+    @apply bg-card rounded-xl p-5 md:p-6 shadow-card
+           transition-all duration-300 ease-out
+           hover:shadow-lg hover:-translate-y-1;
+  }
+
+  .card-mentira {
+    @apply card-elevated relative overflow-hidden;
+  }
+
+  /* Section Styles */
+  .section-padding {
+    @apply px-5 py-12 md:py-16 lg:py-20;
+  }
+
+  .section-spacing {
+    @apply my-[60px] md:my-[80px];
+  }
+
+  /* Badge Styles */
+  .badge-mentira {
+    @apply absolute -top-2 -right-2 rotate-12 bg-destructive text-destructive-foreground
+           font-display font-bold text-xs md:text-sm px-3 py-1 rounded-lg shadow-md;
+  }
+
+  .badge-success {
+    @apply inline-flex items-center gap-1 px-3 py-1 bg-success/10 text-success
+           font-display font-semibold text-sm rounded-full;
+  }
+
+  /* Progress Bar */
+  .progress-emotional {
+    @apply h-1.5 bg-muted rounded-full overflow-hidden;
+  }
+
+  .progress-emotional-fill {
+    @apply h-full bg-gradient-to-r from-action via-success to-success rounded-full
+           transition-all duration-700 ease-out;
+  }
+
+  /* Sticky CTA */
+  .sticky-cta {
+    @apply fixed bottom-0 left-0 right-0 z-50 p-4 bg-card/95 backdrop-blur-md
+           border-t border-border shadow-2xl md:hidden;
+  }
+
+  /* Icon containers */
+  .icon-circle {
+    @apply w-16 h-16 rounded-full flex items-center justify-center text-2xl
+           bg-primary/10 transition-all duration-300;
+  }
+
+  /* Typewriter effect */
+  .typewriter {
+    @apply overflow-hidden whitespace-nowrap border-r-4 border-action;
+    animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
+  }
+
+  /* Comparison paths */
+  .path-poor {
+    @apply bg-destructive/10 border-l-4 border-destructive;
+  }
+
+  .path-rich {
+    @apply bg-success/10 border-l-4 border-success;
+  }
+
+  /* Counter styles */
+  .counter-box {
+    @apply bg-card rounded-xl p-4 text-center shadow-card;
+  }
+
+  .counter-value {
+    @apply font-display font-extrabold text-3xl md:text-4xl text-primary;
+  }
+
+  /* Guarantee seal */
+  .seal-guarantee {
+    @apply w-32 h-32 rounded-full bg-gradient-to-br from-success to-success/80
+           flex items-center justify-center shadow-xl
+           border-4 border-success-foreground/20;
+  }
+}
+
+@layer utilities {
+  /* Custom animations */
+  .animate-pulse-slow {
+    animation: pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-shake {
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-spin-slow {
+    animation: spin 8s linear infinite;
+  }
+
+  .animate-bounce-subtle {
+    animation: bounce-subtle 2s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  /* Gradient backgrounds */
+  .bg-hero-gradient {
+    @apply bg-gradient-to-br from-primary via-primary/95 to-secondary;
+  }
+
+  .bg-section-alt {
+    @apply bg-gradient-to-b from-background to-muted/50;
+  }
+
+  /* Text gradients */
+  .text-gradient-action {
+    @apply bg-gradient-to-r from-action to-action-hover bg-clip-text text-transparent;
+  }
+
+  .text-gradient-success {
+    @apply bg-gradient-to-r from-success to-success/80 bg-clip-text text-transparent;
+  }
+
+  /* Overlay */
+  .overlay-dark {
+    @apply bg-primary/70;
+  }
+}
+
+/* Keyframes */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: hsl(var(--action)) }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.02); }
+}
+
+@keyframes shake {
+  10%, 90% { transform: translateX(-1px); }
+  20%, 80% { transform: translateX(2px); }
+  30%, 50%, 70% { transform: translateX(-4px); }
+  40%, 60% { transform: translateX(4px); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes bounce-subtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 10px hsl(var(--action) / 0.5); }
+  to { box-shadow: 0 0 25px hsl(var(--action) / 0.8); }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-muted;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/30 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary/50;
 }
