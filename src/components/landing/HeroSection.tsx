@@ -118,7 +118,7 @@ export const HeroSection = ({
         duration: 2,
         repeat: Infinity
       }}>
-          <div className="text-primary-foreground/60 mx-0 my-0 ml-0 mt-0 flex-col flex items-center justify-start">
+          <div className="text-primary-foreground/60 flex flex-col items-center justify-center text-center">
             <span className="text-sm font-body mb-2">Role para descobrir</span>
             <span className="text-2xl">↓</span>
           </div>
