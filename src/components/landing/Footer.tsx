@@ -1,17 +1,17 @@
 import { motion } from "framer-motion";
-
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className="bg-primary text-primary-foreground py-10 px-5">
+  return <footer className="bg-primary text-primary-foreground px-5 pt-10 pb-[200px]">
       <div className="container max-w-4xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} viewport={{
+        once: true
+      }} className="text-center">
           {/* Logo/Brand */}
           <h3 className="font-display font-bold text-xl mb-4">
             Você Está Preparado Para Parar de Ser Pobre?
@@ -42,6 +42,5 @@ export const Footer = () => {
           </p>
         </motion.div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
