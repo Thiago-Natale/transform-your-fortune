@@ -112,12 +112,12 @@ export const HeroSection = ({
         </motion.div>
 
         {/* Scroll indicator */}
-        <motion.div className="absolute bottom-8 left-1/2 -translate-x-1/2" animate={{
+        <motion.div animate={{
         y: [0, 10, 0]
       }} transition={{
         duration: 2,
         repeat: Infinity
-      }}>
+      }} className="absolute bottom-8 left-[44%] -translate-x-1/2">
           <div className="text-primary-foreground/60 flex flex-col items-center justify-center text-center">
             <span className="text-sm font-body mb-2">Role para descobrir</span>
             <span className="text-2xl">↓</span>
