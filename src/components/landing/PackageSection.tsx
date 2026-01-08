@@ -2,6 +2,11 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { SectionWrapper } from "./SectionWrapper";
 import { AnimatedButton } from "./AnimatedButton";
+import { CHECKOUT_URL } from "@/config/links";
+
+const handleCheckout = () => {
+  window.open(CHECKOUT_URL, "_blank");
+};
 
 interface PackageSectionProps {
   onProgressChange: (progress: number) => void;
@@ -106,7 +111,7 @@ export const PackageSection = ({ onProgressChange }: PackageSectionProps) => {
               </motion.div>
 
               {/* CTA */}
-              <AnimatedButton icon="🌟" variant="highlight" className="w-full">
+              <AnimatedButton icon="🌟" variant="highlight" className="w-full" onClick={handleCheckout}>
                 QUERO A TRANSFORMAÇÃO COMPLETA
               </AnimatedButton>
             </div>
