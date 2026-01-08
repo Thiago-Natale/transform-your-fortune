@@ -117,7 +117,7 @@ export const HeroSection = ({
       }} transition={{
         duration: 2,
         repeat: Infinity
-      }} className="absolute bottom-8 left-[44%] -translate-x-1/2">
+      }} className="">
           <div className="text-primary-foreground/60 flex flex-col items-center justify-center text-center">
             <span className="text-sm font-body mb-2">Role para descobrir</span>
             <span className="text-2xl">↓</span>
