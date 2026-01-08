@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { SectionWrapper } from "./SectionWrapper";
 import { SolutionCard } from "./SolutionCard";
 import { AnimatedButton } from "./AnimatedButton";
+import { CHECKOUT_URL } from "@/config/links";
 
 interface SolutionSectionProps {
   onProgressChange: (progress: number) => void;
@@ -166,7 +167,7 @@ export const SolutionSection = ({ onProgressChange }: SolutionSectionProps) => {
         transition={{ delay: 0.8 }}
         className="text-center"
       >
-        <AnimatedButton icon="🚀" variant="highlight">
+        <AnimatedButton icon="🚀" variant="highlight" onClick={() => window.open(CHECKOUT_URL, "_blank")}>
           QUERO ESSE MANUAL DE TRANSFORMAÇÃO
         </AnimatedButton>
       </motion.div>

@@ -2,6 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { SectionWrapper } from "./SectionWrapper";
 import { AnimatedButton } from "./AnimatedButton";
+import { CHECKOUT_URL } from "@/config/links";
 
 interface RevelationSectionProps {
   onProgressChange: (progress: number) => void;
@@ -162,7 +163,7 @@ export const RevelationSection = ({ onProgressChange }: RevelationSectionProps) 
           transition={{ delay: 1.5 }}
           className="text-center"
         >
-          <AnimatedButton icon="📖" variant="primary">
+          <AnimatedButton icon="📖" variant="primary" onClick={() => window.open(CHECKOUT_URL, "_blank")}>
             ME MOSTRE ESSES ENSINAMENTOS PROIBIDOS
           </AnimatedButton>
         </motion.div>
