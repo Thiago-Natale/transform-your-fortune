@@ -19,10 +19,13 @@ export const AnimatedButton = ({
   const [isHovered, setIsHovered] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
 
-  const handleClick = () => {
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
     setIsClicked(true);
     setTimeout(() => setIsClicked(false), 500);
-    onClick?.();
+    if (onClick) {
+      onClick();
+    }
   };
 
   const baseStyles = "btn-action relative overflow-hidden";
