@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { SectionWrapper } from "./SectionWrapper";
 import { PhoneMockup } from "./PhoneMockup";
 import { AnimatedButton } from "./AnimatedButton";
+import { CHECKOUT_URL } from "@/config/links";
 
 interface BonusSectionProps {
   onProgressChange: (progress: number) => void;
@@ -190,7 +191,7 @@ export const BonusSection = ({ onProgressChange }: BonusSectionProps) => {
           transition={{ delay: 0.9 }}
           className="text-center"
         >
-          <AnimatedButton icon="🎯" variant="highlight">
+          <AnimatedButton icon="🎯" variant="highlight" onClick={() => window.open(CHECKOUT_URL, "_blank")}>
             QUERO O E-BOOK + PAINEL
           </AnimatedButton>
         </motion.div>

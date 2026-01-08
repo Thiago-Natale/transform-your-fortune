@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { SectionWrapper } from "./SectionWrapper";
 import { MentiraCard } from "./MentiraCard";
 import { AnimatedButton } from "./AnimatedButton";
+import { CHECKOUT_URL } from "@/config/links";
 
 interface RealitySectionProps {
   onProgressChange: (progress: number) => void;
@@ -140,7 +141,7 @@ export const RealitySection = ({ onProgressChange }: RealitySectionProps) => {
         transition={{ delay: 1.8 }}
         className="text-center"
       >
-        <AnimatedButton icon="💡" variant="primary">
+        <AnimatedButton icon="💡" variant="primary" onClick={() => window.open(CHECKOUT_URL, "_blank")}>
           QUERO DESPROGRAMAR MINHA MENTE FINANCEIRA
         </AnimatedButton>
       </motion.div>

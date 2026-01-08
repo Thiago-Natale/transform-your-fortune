@@ -2,6 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { SectionWrapper } from "./SectionWrapper";
 import { AnimatedButton } from "./AnimatedButton";
+import { CHECKOUT_URL } from "@/config/links";
 
 interface ProblemSectionProps {
   onProgressChange: (progress: number) => void;
@@ -184,7 +185,7 @@ export const ProblemSection = ({ onProgressChange }: ProblemSectionProps) => {
         transition={{ delay: 2 }}
         className="text-center"
       >
-        <AnimatedButton icon="🔥" variant="primary">
+        <AnimatedButton icon="🔥" variant="primary" onClick={() => window.open(CHECKOUT_URL, "_blank")}>
           JÁ CANSEI DE CORRER SEM SAIR DO LUGAR
         </AnimatedButton>
       </motion.div>

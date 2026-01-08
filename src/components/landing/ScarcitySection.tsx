@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { SectionWrapper } from "./SectionWrapper";
 import { CounterBox } from "./CounterBox";
 import { AnimatedButton } from "./AnimatedButton";
+import { CHECKOUT_URL } from "@/config/links";
 
 interface ScarcitySectionProps {
   onProgressChange: (progress: number) => void;
@@ -164,7 +165,7 @@ export const ScarcitySection = ({ onProgressChange }: ScarcitySectionProps) => {
         transition={{ delay: 1 }}
         className="text-center"
       >
-        <AnimatedButton icon="⚡" variant="highlight">
+        <AnimatedButton icon="⚡" variant="highlight" onClick={() => window.open(CHECKOUT_URL, "_blank")}>
           GARANTIR ANTES QUE ACABE
         </AnimatedButton>
       </motion.div>
