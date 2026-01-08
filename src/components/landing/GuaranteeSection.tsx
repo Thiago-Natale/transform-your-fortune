@@ -3,6 +3,11 @@ import { useRef } from "react";
 import { SectionWrapper } from "./SectionWrapper";
 import { GuaranteeSeal } from "./GuaranteeSeal";
 import { AnimatedButton } from "./AnimatedButton";
+import { CHECKOUT_URL } from "@/config/links";
+
+const handleCheckout = () => {
+  window.open(CHECKOUT_URL, "_blank");
+};
 
 interface GuaranteeSectionProps {
   onProgressChange: (progress: number) => void;
@@ -143,7 +148,7 @@ export const GuaranteeSection = ({ onProgressChange }: GuaranteeSectionProps) =>
           transition={{ delay: 1 }}
           className="text-center"
         >
-          <AnimatedButton icon="🛒" variant="highlight" className="text-lg md:text-xl px-10 py-6">
+          <AnimatedButton icon="🛒" variant="highlight" className="text-lg md:text-xl px-10 py-6" onClick={handleCheckout}>
             SIM, QUERO MINHA LIBERDADE FINANCEIRA (COM GARANTIA)
           </AnimatedButton>
           <p className="text-sm text-muted-foreground mt-4 flex items-center justify-center gap-2">

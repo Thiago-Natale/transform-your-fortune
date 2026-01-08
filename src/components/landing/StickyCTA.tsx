@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { AnimatedButton } from "./AnimatedButton";
+import { CHECKOUT_URL } from "@/config/links";
 
 interface StickyCTAProps {
   isVisible: boolean;
@@ -7,7 +8,7 @@ interface StickyCTAProps {
 
 export const StickyCTA = ({ isVisible }: StickyCTAProps) => {
   const handleClick = () => {
-    window.open("https://pay.hotmart.com/seulink", "_blank");
+    window.open(CHECKOUT_URL, "_blank");
   };
 
   return (
