@@ -96,14 +96,14 @@ export const PackageSection = ({ onProgressChange }: PackageSectionProps) => {
               >
                 <div className="flex items-center justify-center gap-2 mb-2">
                   <span className="text-primary-foreground/60 line-through text-lg">
-                    R$200
+                    R$100
                   </span>
                   <span className="bg-success text-success-foreground text-sm font-bold px-2 py-1 rounded">
                     -50%
                   </span>
                 </div>
                 <div className="text-5xl font-display font-extrabold">
-                  R$<span className="text-action">100</span>
+                  R$<span className="text-action">50</span>
                 </div>
                 <p className="text-sm text-primary-foreground/80 mt-1">
                   à vista ou em até 12x

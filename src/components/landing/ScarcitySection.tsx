@@ -62,16 +62,16 @@ export const ScarcitySection = ({ onProgressChange }: ScarcitySectionProps) => {
         />
         <CounterBox
           label="Preço Atual"
-          startValue={100}
-          endValue={100}
+          startValue={0}
+          endValue={50}
           prefix="R$"
           direction="up"
           icon="💰"
         />
         <CounterBox
           label="Bônus"
-          startValue={0}
-          endValue={0}
+          startValue={100}
+          endValue={47}
           suffix=" GRÁTIS"
           direction="down"
           icon="🎁"
@@ -101,9 +101,9 @@ export const ScarcitySection = ({ onProgressChange }: ScarcitySectionProps) => {
           </h4>
           <p className="text-body text-muted-foreground">
             O valor atual é{" "}
-            <strong className="text-success">R$100</strong>. Nas próximas semanas,
+            <strong className="text-success">R$50</strong>. Nas próximas semanas,
             subirá para{" "}
-            <span className="line-through text-muted-foreground">R$200</span>.
+            <span className="line-through text-muted-foreground">R$100</span>.
           </p>
         </div>
 

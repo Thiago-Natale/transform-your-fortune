@@ -192,7 +192,7 @@ export const BonusSection = ({ onProgressChange }: BonusSectionProps) => {
           className="text-center"
         >
           <AnimatedButton icon="🎯" variant="highlight" onClick={() => window.open(CHECKOUT_URL, "_blank")}>
-            QUERO O E-BOOK + PAINEL
+            QUERO A REPROGRAMAÇÃO + PAINEL
           </AnimatedButton>
         </motion.div>
       </div>

@@ -18,7 +18,7 @@ export const GuaranteeSection = ({ onProgressChange }: GuaranteeSectionProps) =>
   const isInView = useInView(ref, { once: true });
 
   const guaranteeSteps = [
-    "Ler o e-book",
+    "Começar a reprogramação",
     "Aplicar os ensinamentos",
     "E não sentir uma mudança real na sua mentalidade financeira...",
   ];
@@ -127,7 +127,7 @@ export const GuaranteeSection = ({ onProgressChange }: GuaranteeSectionProps) =>
             >
               <span className="text-3xl mb-3 block">✅</span>
               <p className="font-display font-bold text-lg text-success">
-                R$100 investidos na sua transformação
+                R$50 investidos na sua transformação
               </p>
             </motion.div>
 

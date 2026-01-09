@@ -142,7 +142,7 @@ export const RealitySection = ({ onProgressChange }: RealitySectionProps) => {
         className="text-center"
       >
         <AnimatedButton icon="💡" variant="primary" onClick={() => window.open(CHECKOUT_URL, "_blank")}>
-          QUERO DESPROGRAMAR MINHA MENTE FINANCEIRA
+          QUERO REPROGRAMAR MINHA MENTE FINANCEIRA
         </AnimatedButton>
       </motion.div>
     </SectionWrapper>
