@@ -17,7 +17,7 @@ export const Footer = () => {
             Você Está Preparado Para Parar de Ser Pobre?
           </h3>
 
-          {/* Links */}
+          {/* Links
           <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-primary-foreground/70 mb-6">
             <a href="#" className="hover:text-primary-foreground transition-colors">
               Política de Privacidade
@@ -26,7 +26,7 @@ export const Footer = () => {
             <a href="#" className="hover:text-primary-foreground transition-colors">
               Termos de Uso
             </a>
-          </div>
+          </div> */}
 
           {/* Copyright */}
           <p className="text-sm text-primary-foreground/60 mb-4">
